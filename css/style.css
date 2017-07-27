@@ -1,27 +1,31 @@
-html, body{
+html{
 	margin: 0px;
 	padding: 0px;
-	background-color: black;
 	font: "Book Antiqua" serif;
-	height: 100%;
+	font-size: 16px;
+	min-height: 100%
+}
+
+body{
+    width: 100%;
+    height: inherit;
+    background-color: black;
 }
 
 /*Index.html*/
 
 .wrapper-index{
 	background: url("../images/start-background.jpg") center no-repeat;
-	background-attachment: fixed;
-	background-size: cover; 
+	background-size: cover;
 	position: relative;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	padding: 2rem;
 }
 
 .wrapper-index-inner{
 	width: 400px;
 	height: 100px;
-	background-color: ;
 	position: absolute;
 	top:0;
 	bottom: 0;
@@ -65,26 +69,16 @@ header{
 	margin: 0 auto;
 }
 
-/*.wrapper{
-    position: relative;
-	width: 100%;
-	height: 90%;
-    background-color: black;
+.wrapper{
+	height: 100%;
 }
-*/
+
 
 .navbar{
 	width: 100%;
-/*    margin-bottom: 20px;*/
     position: fixed;
     z-index: 10;
-/*    opacity: 0.7;*/
     background-color: rgba(0, 0, 0, 0.5) !important;
-/*    padding-bottom: 0 !important;*/
-}
-
-li.nav-item{
-	opacity: 1;
 }
 
 .navbar-brand{
@@ -111,41 +105,21 @@ li:active{color: #fff;}
     /*background-color: red !important;*/
 }
 
-/*a{
-	color: #fff !important;
-}*/
-
-
 /*Carousel styles*/
 
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
+  min-height: 100%;
 }
 
 /* Declare heights because of positioning of img element */
-.carousel-item .active{
-    /*min-height: 100%;*/
-}
-
-.carousel-item {
-/*	height: 720px;*/
-  /*min-height: 100%;*/
-    background-color: #777;
-/*  object-fit: cover;*/	
-}
 
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-
-  /*min-width: 100% !important;*/
-  /*background-size: cover;*/
-/*  height: 50rem;*/
-/*  height: auto;
-*//*  object-fit: cover;*/
 }
 
 .carousel-inner{
@@ -157,18 +131,6 @@ li:active{color: #fff;}
 	padding-top: 63px;
 	margin: 0 auto;
 }
-
-/*.fill {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-.fill img {
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
-}*/
 
 /*Carousell styles ends*/
 
@@ -183,6 +145,7 @@ li:active{color: #fff;}
 	font-family: Georgia;
 	font-style: italic;
 	color: #fff;
+	font-size: 2rem;
 }
 
 .titles > a:hover{text-decoration: none;}
@@ -190,11 +153,13 @@ li:active{color: #fff;}
 .titles > a:active{text-decoration: none;}
 .titles > a:link{text-decoration: none;}
 
-table{
+.table{
    color: #706b6b;
    border: none !important;
-   font-size: 1.5rem;
+   font-size: 1rem;
+   max-width: 100%;
    margin: 2rem 0 !important;
+   padding: 0 2rem;
 }
 
 .table tr:first-child{
@@ -222,36 +187,37 @@ tr:hover{
 .news{
 	width: 85%;
 	margin: 0 auto;
-}
-
-.news-box{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-	overflow: hidden;
+	height: auto !important;
 }
 
 .news-box > .row{
 	width: 100%;
 	height: 50%;
-    margin-left: 0.2rem;
     text-align: left;
+    margin: 0 auto !important;
+    display: flex;
+    flex-direction: column;
 }
 
 .news-item{
-	width: 30%;
 	height: 100%;
 	padding: 0.2rem;
 }
 
-.box-lg{
+.box-lg {
 	width: 100%;
-	height: 100%;
 	background-image: url('../images/link-default.jpg');
 	background-size: cover;
 	margin: 0 auto;
 	padding: 0 auto;
+}
+
+@media only screen and (max-width: 720px) {
+    .box-lg {
+	 max-width: 250px;
+	 font-size: 1rem;
+	 overflow: hidden;
+    }
 }
 
 .box-lg-2{
@@ -259,13 +225,11 @@ tr:hover{
 }
 
 .box-lg-title{
-	width: 100%;
-	height: 100%;
 	font-weight: bold;
 	font-size: 3rem;
 	margin: 0 auto;
 	padding-top: 35%;
-	padding-left: 5%;
+	padding-left: 1%;
 	overflow: hidden;
 }
 
@@ -305,13 +269,24 @@ a.news-link:active{
 
 /*FOOTER*/
 .section{
-	margin: 3rem  0 0;
+	margin: 0;
 	padding: 3rem 3rem 0 3rem;
 /*	background-color: yellow;*/
 }
 
-li.nav-item {
-    padding: 1.5%;
+ul.nav{
+	display: inline;
+	height: 100%;
+    text-align: center;
+}
+
+ul.nav > li{
+	display: inline;
+}
+
+li.nav-item{
+	width: auto;
+	padding: 1.5%;
 }
 
 li.nav-item > a{
@@ -322,23 +297,34 @@ li.nav-item > a:hover{
 	color: #fff;
 }
 
-/*a.nav-link{
-	padding: 0.5rem !important;
-}*/
+a.nav-link{
+	padding: 0 0.5rem !important;
+}
 
 .nav-link{
 	display: inline !important;
 }
 
+.nav-social{
+	height: 100%;
+}
+
 .nav-social > ul > li{
 	display: inline;
 	font-size: 24px;
+	vertical-align: middle;
 }
 
 .nav-footer{
 	width: 100%;
 	height: 100%;
 	text-align: center;
+}
+
+ul.social-icons{
+	padding-left: 0 !important;
+	margin-bottom: 0 !important;
+	height: 100%;
 }
 
 ul.social-icons > li > a {
