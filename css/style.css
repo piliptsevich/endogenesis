@@ -4,12 +4,14 @@ html{
 	font: "Book Antiqua" serif;
 	font-size: 16px;
 	min-height: 100%
+	min-width: 100vw;
 }
 
 body{
     width: 100%;
     height: inherit;
     background-color: black;
+    min-width: 100vw;
 }
 
 /*Index.html*/
