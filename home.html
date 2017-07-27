@@ -21,6 +21,7 @@
 
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
   </head>
   <body>
 
@@ -89,16 +90,15 @@
 
       <!-- 16:9 BOX SCRIPT -->
       <script>
-        var height = $('.carousel-inner').width()/1.77778;
+      var height = $('.carousel-inner').width()/1.77778;
         $('.carousel-inner').css({'height':height+'px'});
         $(window).resize(function(){
-        $('.carousel-inner').css({'height':height+'px'});
-        });
+          var height = $('.carousel-inner').width()/1.77778;
+          $('.carousel-inner').css({'height':height+'px'});
+          });
       </script>
 
     <!-- CAROUSEL ENDS -->
-
-    <div class="tall-page wrapper">
 
       <div class="titles text-center">
       <a id="tourlink" class="body-link" href="#"><h2 id="tour">Tour</h2></a>
@@ -131,34 +131,34 @@
       <div class="news text-center container">
         <div class="news-box">
             <div class="row">
-              <div class="news-item col-md-4  col-sm-12 col-xs-12">
+              <div class="news-item col-sm-12 col-md-6 col-lg-4">
                 <a class="news-link" href="#"><div class="box-lg">
                   <div class="box-lg-title">New song is coming!</div>
                 </div></a>
               </div>
-              <div class="news-item col-md-4  col-sm-12 col-xs-12">
+              <div class="news-item col-sm-12 col-md-6 col-lg-4">
                 <a class="news-link" href="#"><div class="box-lg box-lg-2">
                   <div class="box-lg-title">New song is coming!</div>
                 </div></a>
               </div>
-              <div class="news-item col-md-4  col-sm-12 col-xs-12">
+              <div class="news-item col-sm-12 col-md-6 col-lg-4">
                 <a class="news-link" href="#"><div class="box-lg">
                   <div class="box-lg-title">New song is coming!</div>
                 </div></a>
               </div>
             </div> 
             <div class="row">
-              <div class="news-item col-md-4  col-sm-12 col-xs-12">
+              <div class="news-item col-sm-12 col-md-6 col-lg-4">
                 <a class="news-link"href="#"><div class="box-lg box-lg-2">
                   <div class="box-lg-title">New song is coming!</div>
                 </div></a>
               </div>
-              <div class="news-item col-md-4  col-sm-12 col-xs-12">
+              <div class="news-item col-sm-12 col-md-6 col-lg-4">
                 <a class="news-link" href="#"><div class="box-lg">
                   <div class="box-lg-title">New song is coming!</div>
                 </div></a>
               </div>
-              <div class="news-item col-md-4  col-sm-12 col-xs-12">
+              <div class="news-item col-sm-12 col-md-6 col-lg-4">
                 <a class="news-link" href="#"><div class="box-lg box-lg-2">
                   <div class="box-lg-title">New song is coming!</div>
                 </div></a>
@@ -181,8 +181,7 @@
         $('.iframe-video').css({'height':height+'px'});
         });
       </script>
-
-      </div>       
+     
   	</div>
 
   <footer>
