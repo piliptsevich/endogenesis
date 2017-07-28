@@ -55,6 +55,11 @@ body{
 	color: rgba(255, 165, 0, 0.5);
 }
 
+#hyperspan:active{
+	text-decoration: none;
+	color: rgba(255, 165, 0, 0.5);
+}
+
 /*a#hyperspan:link { color: #b7b3b3 !important; }
 a#hyperspan:visited { color: #b7b3b3 !important; }
 a#hyperspan:hover { color: #ffffff !important;}
