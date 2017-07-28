@@ -3,7 +3,7 @@ function goToByScroll(id){
     id = id.replace("link", "");
       // Scroll
     $('html,body').animate({
-        scrollTop: $("#"+id).offset().top-65},
+        scrollTop: $("#"+id).offset().top-75},
         'slow');
 }
 

@@ -4,14 +4,11 @@ html{
 	font: "Book Antiqua" serif;
 	font-size: 16px;
 	min-height: 100%
-	min-width: 100vw;
 }
 
 body{
-    width: 100%;
     height: inherit;
     background-color: black;
-    min-width: 100vw;
 }
 
 /*Index.html*/
@@ -68,23 +65,39 @@ a#hyperspan:active { color: #ffffff !important; }*/
 
 header{
 	width: 100%;
+	height: 4.5rem;
+	display: block;
 	margin: 0 auto;
 }
 
 .wrapper{
 	height: 100%;
+	width: 100%;
 }
-
 
 .navbar{
 	width: 100%;
+	/*height: inherit;*/
     position: fixed;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.5) !important;
+    padding: 1rem 0;
+}
+
+@media only screen and (max-width: 720px) {
+    .navbar{
+	    height: auto;
+    }
+}
+
+nav.navbar .container{
+	padding: 0;
+	width: auto;
 }
 
 .navbar-brand{
 	margin-right: 3rem;
+	padding-left: 1rem;
 }
 
 .navbar-brand:hover{
@@ -96,15 +109,16 @@ header{
 }
 
 li:hover{color: #b7b3b3;}
-li:active{color: #fff;}
+/*li:active{color: #fff;}*/
+
+a.nav-link-header{
+	width: 80px !important;
+	padding-top: 0.5rem !important;
+	padding-bottom: 0.5rem !important;
+}
 
 .container{
 	margin: 0;
-	width: 100%;
-}
-
-.bg-inverse {
-    /*background-color: red !important;*/
 }
 
 /*Carousel styles*/
@@ -271,10 +285,15 @@ a.news-link:active{
 
 /*FOOTER*/
 .section{
-	width: 100vw;
+	width: 100%;
 	margin: 0;
 	padding-top: 3rem;
 /*	background-color: yellow;*/
+}
+
+.section div.row {
+	width: 100%;
+	margin: 0 !important;
 }
 
 ul.nav{
@@ -301,7 +320,7 @@ li.nav-item > a:hover{
 }
 
 a.nav-link{
-	padding: 0 0.5rem !important;
+	padding: 0 0.5rem;
 }
 
 .nav-link{
