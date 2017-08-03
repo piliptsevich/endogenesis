@@ -60,11 +60,6 @@ body{
 	color: rgba(255, 165, 0, 0.5);
 }
 
-/*a#hyperspan:link { color: #b7b3b3 !important; }
-a#hyperspan:visited { color: #b7b3b3 !important; }
-a#hyperspan:hover { color: #ffffff !important;}
-a#hyperspan:active { color: #ffffff !important; }*/
-
 /*end of index.html*/
 
 header{
@@ -81,14 +76,14 @@ header{
 
 .navbar{
 	width: 100%;
-	/*height: inherit;*/
+	height: inherit;
     position: fixed;
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.5) !important;
     padding: 1rem 0;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 992px) {
     .navbar{
 	    height: auto;
     }
@@ -96,12 +91,14 @@ header{
 
 nav.navbar .container{
 	padding: 0;
-	width: auto;
+	width: 100%;
+	height: 100%;
 }
 
 .navbar-brand{
 	margin-right: 3rem;
 	padding-left: 1rem;
+	height: 100%;
 }
 
 .navbar-brand:hover{
@@ -110,19 +107,13 @@ nav.navbar .container{
 
 .navbar-collapse{
 	text-align: center;
+	height: 100%;
 }
-
-li:hover{color: #b7b3b3;}
-/*li:active{color: #fff;}*/
 
 a.nav-link-header{
-	width: 80px !important;
-	padding-top: 0.5rem !important;
-	padding-bottom: 0.5rem !important;
-}
-
-.container{
-	margin: 0;
+	padding: 0 !important;
+	margin-left: 1rem;
+	vertical-align: middle;
 }
 
 /*Carousel styles*/
@@ -130,22 +121,42 @@ a.nav-link-header{
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
-  min-height: 100%;
+  min-height: 90%;
 }
 
 /* Declare heights because of positioning of img element */
 
-.carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.carousel-inner{
+    height: initial !important;
+    background-image: url('../images/carousel-background.jpg');
 }
 
-.carousel-inner{
-    width: 100%;
-    max-height: 1000px;
+.carousel-item img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 0 auto;
+  	position: relative;
+  	top: 0;
+  	left: 0;
+  	width: auto; /*100%*/
+  	max-height: 90vh; /*delete*/
 }
+
+@media only screen and (max-width: 992px) {
+  	.carousel-item img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin: 0 auto;
+  	position: relative;
+  	top: 0;
+  	left: 0;
+  	width: 100vw; /*100%*/
+  	height: 56.25vw;
+	}
+}
+
 
 #authorCarousel{
 	padding-top: 63px;
@@ -156,9 +167,9 @@ a.nav-link-header{
 
 /*TOUR*/
 
-.titles > a > h2{
+.titles a h2{
 	/*text-decoration: underline;*/
-	margin: 4% 8%;
+	margin: 4% 8% 1% 8%;
 	text-align: left !important;
 	border-bottom: solid 2px #fff;
 	padding-bottom: 5px;
@@ -205,14 +216,14 @@ tr:hover{
 /*NEWS*/
 
 .news{
-	width: 85%;
+	max-width: 65vw;
 	margin: 0 auto;
 	height: auto !important;
 }
 
-.news-box > .row{
+.news-box .row{
 	width: 100%;
-	height: 50%;
+	max-height: 100vh !important;
     text-align: left;
     margin: 0 auto !important;
     display: flex;
@@ -220,7 +231,6 @@ tr:hover{
 }
 
 .news-item{
-	height: 100%;
 	padding: 0.2rem;
 }
 
@@ -232,7 +242,17 @@ tr:hover{
 	padding: 0 auto;
 }
 
-@media only screen and (max-width: 720px) {
+.box-lg div.box-lg-title{
+	font-weight: bold;
+	font-size: 3rem;
+	margin: 0 auto;
+	padding-top: 35%;
+	padding-left: 1%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+@media only screen and (max-width: 992px) {
     .box-lg {
 	 max-width: 250px;
 	 font-size: 1rem;
@@ -242,15 +262,6 @@ tr:hover{
 
 .box-lg-2{
 	background-image: url('../images/link-default-2.jpg');
-}
-
-.box-lg-title{
-	font-weight: bold;
-	font-size: 3rem;
-	margin: 0 auto;
-	padding-top: 35%;
-	padding-left: 1%;
-	overflow: hidden;
 }
 
 a.news-link{
@@ -311,7 +322,6 @@ ul.nav > li{
 }
 
 li.nav-item{
-	width: auto;
 	padding: 1.5%;
 }
 
